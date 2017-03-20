@@ -436,3 +436,15 @@
       setTimeout(bumpStop(), 200)
   })
 
+
+document.addEventListener('touchstart', function(){
+      mouseIsDown = true
+    if (keyIsDown) return false;
+    gameLogic()
+  }, false);
+document.addEventListener('touchend', function(){
+    mouseIsUp = true;
+    if (!keyIsDown)
+      setTimeout(bumpStop(), 200)
+  }, false);
+
