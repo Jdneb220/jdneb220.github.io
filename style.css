@@ -1,0 +1,592 @@
+
+.court {
+  top:20px;
+  left:20px;
+  position: absolute;
+  width: 1130px;
+  height: 800px;
+  background-repeat:  no-repeat;
+  background-image: url('img/court.png');
+}
+
+#overlay{
+  top:20px;
+  left:20px;
+  position: absolute;
+  width: 1130px;
+  height: 800px;
+  background-color: rgba(0,0,0,0.7);
+  display: block;
+}
+
+.welcomeMessage{
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url('img/text2.png');
+  background-position: -46px -5px;
+  width: 777px;
+  height: 74px;
+  margin: 80px auto;
+  display: none;
+}
+
+.howtoplay{
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url('img/text2.png');
+  background-position: -226px -92px;
+  width: 404px;
+  height: 58px;
+  margin: 80px auto;
+  display: none;
+}
+
+.spacebar{
+  background-repeat: no-repeat;
+  background-image: url('img/spacebar.png');
+  position: absolute;
+  top: 400px;
+  left: 120px;
+  width: 261px;
+  height: 123px;
+  animation: mover .6s linear infinite;
+  display: none;
+}
+
+.andor{
+  background-repeat: no-repeat;
+  background-image: url('img/text.png');
+  background-position: -176px -631px;
+  width: 131px;
+  height: 73px;
+  position: relative;
+  margin: 120px auto 40px;
+  display: none;
+}
+
+.mouseclick{
+  background-repeat: no-repeat;
+  background-image: url('img/mouseclick.png');
+  position: absolute;
+  top: 400px;
+  left: 720px;
+  width: 261px;
+  height: 201px;
+  animation: mover .7s linear infinite;
+  display: none;
+}
+
+.pressspacetocontinue{
+  background-repeat: no-repeat;
+  background-image: url('img/text2.png');
+  background-position: -6px -165px;
+  width: 845px;
+  height: 56px;
+  position: relative;
+  margin: 160px auto;
+  display: none;
+}
+
+
+
+
+
+.fan{
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url('img/spectator.png');
+}
+
+
+.mover {
+  animation: mover .5s linear infinite;
+}
+
+.moverWin {
+  animation: mover .5s linear infinite;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.fan1 {
+  background-position: -127px -251px;
+  width: 52px;
+  height: 93px;
+}
+
+.fan2 {
+  background-position: -189px -130px;
+  width: 48px;
+  height: 93px;
+}
+
+.fan3 {
+  background-position: -192px -22px;
+  width: 49px;
+  height: 93px;
+}
+
+.fan4 {
+  background-position: -72px -20px;
+  width: 52px;
+  height: 95px;
+}
+
+.fan5 {
+  background-position: -11px -249px;
+  width: 45px;
+  height: 95px;
+}
+
+.fan6 {
+  background-position: -59px -259px;
+  width: 59px;
+  height: 100px;
+}
+
+.fan7 {
+  background-position: -68px -130px;
+  width: 47px;
+  height: 93px;
+}
+
+.fan8 {
+  background-position: -132px -16px;
+  width: 53px;
+  height: 99px;
+}
+
+.fan9{
+  background-position: -8px -17px;
+  width: 55px;
+  height: 96px;
+}
+
+
+
+
+#scoreboard{
+  font-family: 'Black Ops One', 'sans-serif';
+  top: 230px;
+  left: 900px;
+  white-space : nowrap;
+  position: absolute;
+  background: #222;
+  padding:20px;
+  border-radius:20px;
+  box-shadow: 4px 4px 20px #222;
+}
+
+#scoreboard > span{
+  display: inline-block;
+  background-color: #2c55e8;
+  color: white;
+  font-size: 100px;
+  margin: 2px;
+  padding: 5px;
+  width: 75px;
+  height: 115px;
+  text-align: center;
+  text-shadow: 2px 1px 1px #222;
+}
+
+.net {
+  top:210px;
+  left:560px;
+  position: absolute;
+  background-position: -1154px -180px;
+  width: 100px;
+  height: 613px;
+  background-repeat: no-repeat;
+  background-image: url('img/court.png');
+
+}
+
+
+#alert_box{
+  top: 100px;
+  left: 500px;
+  position: absolute;
+  padding:20px;
+}
+
+
+#alert_box > *{
+  background-repeat: no-repeat;
+  background-image: url('img/text.png');
+}
+
+.oops {
+  background-position: -239px -4px;
+  width: 122px;
+  height: 43px;
+  margin-top: 32px;
+  margin-left: 72px;
+}
+
+ .tweet{
+  background-position: -362px -4px;
+  width: 143px;
+  height: 43px;
+  margin-top: 30px;
+  margin-left: 55px;
+ }
+
+.perfect{
+  background-position: -14px -53px;
+  width: 348px;
+  height: 61px;
+  margin-left: -40px;
+}
+
+.superb{
+  background-position: -420px -122px;
+  width: 307px;
+  height: 60px;
+  margin-left: -20px;
+}
+
+.athletic{
+  background-position: -375px -53px;
+  width: 357px;
+  height: 61px;
+}
+
+.bash{
+  background-position: -5px -122px;
+  width: 217px;
+  height: 60px;
+  margin-left: 26px;
+}
+.wow{
+  background-position: -236px -122px;
+  width: 170px;
+  height: 60px;
+  margin-left: 40px;
+}
+
+.great{
+  background-position: -19px -190px;
+  width: 304px;
+  height: 65px;
+  margin-left: -20px;
+  margin-top: 4px;
+}
+
+.bounce{
+  background-position: -349px -190px;
+  width: 374px;
+  height: 65px;
+  margin-left: -41px;
+  margin-top: 4px;
+}
+
+.ready{
+  background-position: -200px -271px;
+  width: 366px;
+  height: 74px;
+  margin-left:-56px;
+}
+
+.ballup{
+  background-position: -136px -359px;
+  width: 495px;
+  height: 73px;
+  margin-left:-110px;
+}
+
+.youwin{
+  background-position: -6px -455px;
+  width: 380px;
+  height: 75px;
+  margin-left: -70px;
+  margin-top:300px;
+}
+
+.playagain{
+  background-position: -416px -455px;
+  width: 589px;
+  height: 75px;
+  margin-left: -164px;
+    margin-top:300px;
+}
+
+.continue{
+  background-position: -317px -631px;
+  width: 516px;
+  height: 73px;
+}
+
+@keyframes fade-in {
+  0%{
+    display:none;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+
+
+
+.player_one{
+  top:480px;
+  left:220px;
+  position: absolute;
+  background-image: url('img/sprites.png');
+  background-repeat:  no-repeat;
+  background-position: -1010px -5px;
+  width: 34px;
+  height: 123px;
+}
+
+
+.ball{
+  top:536px;
+  left:1032px;
+  position: absolute;
+  background-image: url('img/volleyball.png');
+  background-repeat:  no-repeat;
+  background-size: 100% 100%;
+  width: 35px;
+  height: 35px;
+  animation: spin-right linear infinite;
+  animation-duration: 8.4s;
+}
+
+#athletic_award{
+  top:362px;
+  left:862px;
+  position: absolute;
+  background-image: url('https://img.clipartfest.com/65d5d0d12b0fa00e60aedf9c849e4063_http-staticcomicvinecom-thumbs-up-clipart-png_765-990.png');
+  background-repeat:  no-repeat;
+  background-size: 100% 100%;
+  width: 35px;
+  height: 45px;
+  display: none;
+}
+
+@keyframes spin-right {
+  100% {
+   transform: rotate(360deg);
+  }
+}
+
+.setter{
+  top: 666px;
+  left: 520px;
+  position: absolute;
+  background-image: url('img/sprites.png');
+  background-repeat: no-repeat;
+  background-position: -940px -522px;
+  width: 34px;
+  height: 123px;
+}
+
+
+.libero{
+  background-image: url('img/sprites.png');
+  background-repeat: no-repeat;
+  background-position: -387px -649px;
+  width: 73px;
+  height: 97px;
+}
+
+
+#l1 {
+  top: 666px;
+  left: 820px;
+  position: absolute;
+}
+
+#l2 {
+  top: 456px;
+  left: 840px;
+  position: absolute;
+}
+
+#l3 {
+  top: 586px;
+  left: 940px;
+  position: absolute;
+}
+
+
+
+
+
+
+.set1{
+  background-position: -216px -832px;
+  top: 660px;
+  width: 44px;
+  height: 133px;
+}
+
+.set2{
+  background-position: -312px -828px;
+  width: 44px;
+  height: 146px;
+  animation: jump .5s ease-in;
+}
+
+@keyframes jump {
+  0% {
+    top: 666px;
+  }
+  50% {
+    top: 646px;
+  }
+  100% {
+   top: 666px;
+  }
+}
+
+
+.low-set1{
+  background-position: -408px -828px;
+  width: 51px;
+  height: 111px;
+  top: 694px;
+  animation: low-set 1s;
+}
+.low-set2{
+  background-position: -307px -570px;
+  width: 64px;
+  height: 76px;
+  top: 709px;
+}
+.low-set3 {
+  background-position: -404px -566px;
+  width: 69px;
+  height: 78px;
+}
+.low-set4{
+  background-position: -499px -572px;
+  width: 74px;
+  height: 72px;
+}
+
+.low-set5 {
+  background-position: -408px -828px;
+  width: 51px;
+  height: 111px;
+  top: 685px;
+}
+
+
+
+.crouch{
+  background-position: -1057px -40px;
+  top:500px;
+  width: 63px;
+  height: 88px;
+}
+
+.pass{
+  background-position: -1524px -132px;
+  width: 73px;
+  height: 97px;
+}
+
+.right1{
+  background-position: -1026px -133px;
+  width: 49px;
+  height: 123px;
+}
+
+.right2{
+  background-position: -1145px -130px;
+  width: 65px;
+  height: 126px;
+}
+
+.right3{
+  background-position: -1263px -135px;
+  width: 96px;
+  height: 116px;
+}
+
+.right4{
+  background-position: -1400px -134px;
+  width: 69px;
+  height: 123px;
+}
+
+.left1{
+  background-position: -1025px -261px;
+  width: 49px;
+  height: 124px;
+}
+
+.left2{
+  background-position: -1144px -258px;
+  width: 65px;
+  height: 127px;
+}
+
+.left3{
+  background-position: -1263px -263px;
+  width: 95px;
+  height: 117px;
+}
+
+.left4{
+  background-position:  -1400px -262px;
+  width: 69px;
+  height: 123px;
+}
+
+.jump1{
+  background-position: -1525px -311px;
+  width: 51px;
+  height: 111px;
+}
+
+.jump2{
+  background-position: -1223px 0;
+  width: 79px;
+  height: 128px;
+}
+
+.jump3{
+  background-position: -1628px -311px;
+  width: 44px;
+  height: 146px;
+}
+
+.jump4{
+  background-position: -1822px -285px;
+  width: 42px;
+  height: 132px;
+}
+
+.jump5{
+  background-position: -1653px -132px;
+  width: 74px;
+  height: 72px;
+}
+
+.jump6{
+  background-position: -1914px -256px;
+  width: 65px;
+  height: 130px;
+}
+
+#bar{
+  top:820px;
+  left:260px;
+  position: absolute;
+  background-image: url('img/bar_sprite.png');
+  background-repeat:  no-repeat;
+  background-position: -15px -19px;
+  width: 719px;
+  height: 161px;
+}
+
