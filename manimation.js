@@ -48,10 +48,21 @@
   }
 
   //function bounceFans
-  //anytime the score is updated, grab a random fan and bounce him
-  //as the number of wins increases, the interval at which a fan is selected also increases, represented by fanBounceSpeed
+  //everytime the score is updated, bounce a larger percentage of the fans
   let fanInterval = false
   let bounceFans = function(){
+    $('.fan').removeClass('mover')
+    for (i = 0; i <= $('.fan').length; i++){
+      if (numWins != 0 && i % (WIN_CONDITION-numWins+1) === 0){
+        $($('.fan')[i]).addClass('mover')
+        console.log (i)
+      }
+    }
+
+    //OLD BOUNCE LOGIC, CAUSED LAG
+    //anytime the score is updated, grab a random fan and bounce him
+    //as the number of wins increases, the interval at which a fan is selected also increases, represented by fanBounceSpeed
+    /*
     if (numWins === WIN_CONDITION){
       $('.fan').not('.mover').addClass('mover')
       setTimeout(function(){$('.fan').not('.mover').addClass('mover')},500)
@@ -68,6 +79,7 @@
           },500)}
       }, fanBounceSpeed)
     }
+    */
   }
 
   let clearFanInterval = function(){
@@ -436,8 +448,7 @@
       setTimeout(bumpStop(), 200)
   })
 
-
-document.addEventListener('touchstart', function(){
+  document.addEventListener('touchstart', function(){
       mouseIsDown = true
     if (keyIsDown) return false;
     gameLogic()
@@ -447,4 +458,5 @@ document.addEventListener('touchend', function(){
     if (!keyIsDown)
       setTimeout(bumpStop(), 200)
   }, false);
+
 

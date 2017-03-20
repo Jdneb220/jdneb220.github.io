@@ -25,8 +25,7 @@ jQuery DOM manipulation
 Bump, Set, Spike is intended for online play and can be found at https://jdneb220.github.io
 
 ## Unsolved Problems
-- The crowd will slowly increase jumping intensity as the game progresses, and jump together when the game is over.  Because there are intervals running at the time the game ends, the timing is slightly off.
-- When the crowd reaches maximum intensity, the game experiences slowdown due the fequency of the bounceFan interval.  Optimizing the approach should reduce lag.
+- The crowd will slowly increase jumping intensity as the game progresses, and jump together when the game is over.  Because there are intervals running at the time the game ends, the timing is slightly off.  When the crowd reaches maximum intensity, the game experiences slowdown due the fequency of the bounceFan interval.  Optimizing the approach should reduce lag.  [edit 3/20 changed logic from random fans to percent of fans]
 
 
 ## Sources Cited
