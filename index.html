@@ -21,10 +21,8 @@
   <body>
 
   <div class="container" id="resume">
-      <div id="card" class="row">
-        <div class="col-xs-3 col-sm-4">
-        </div>
-        <div class="col-xs-9 col-sm-8">
+      <div id="card" class="row" style="display:none">
+        <div class="col-xs-12 col-sm-12">
           <h1>Benjamin <span>de Jesus</span></h1>
           <h2>Fullstack Developer</h2>
           <section id="basics">
@@ -67,7 +65,7 @@
           </section>
         </div>
       </div>
-  <section id="work" class="row">
+  <section id="work" class="row" style="display:none">
     <div class="col-sm-4">
       <div class="row">
         <div class="col-xs-2">
@@ -147,7 +145,7 @@
 
 
 
-  <section id="interests" class="row">
+  <section id="interests" class="row" style="display:none">
     <div class="col-sm-4">
       <div class="row">
         <div class="col-xs-2">
@@ -181,4 +179,30 @@
   </div>
 
   </body>
+  <script>
+  $(function(){
+    $('#card').css({
+        'position' : 'absolute',
+        'left' : '50%',
+        'top' : '50%',
+        'margin-left' : -$('#card').outerWidth()/2,
+        'margin-top' : -$('#card').outerHeight()/2
+    }).fadeIn();
+
+
+    setInterval(function(){
+      $('#card').removeAttr('style')
+    },3000)
+
+    setInterval(function(){
+      $('#work').fadeIn()
+    },4000)
+
+    setInterval(function(){
+      $('#card').fadeIn()
+    },5000)
+
+
+  })
+  </script>
 </html>
