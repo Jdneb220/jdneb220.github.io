@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>NCAA Division I Women's Volleyball Bracket</title>
+        <meta name="description" content="fillable ncaa bracket">
+        <link rel="stylesheet" href="styles.css">
+		<style>
+			li{
+			color: #444
+			}
+			b{
+			color: #000
+			}
+		</style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+		<h2>oh wow, here are your picks <span id="myname"></span></h2>
+		<ol>
+		</ol>
+		
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script>
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split('&');
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split('=');
+				if (decodeURIComponent(pair[0]) == variable) {
+					return decodeURIComponent(pair[1]);
+				}
+			}
+			console.log('Query variable %s not found', variable);
+		}
+
+		teams = ['Penn St.', 'Howard', 'VCU', 'Pittsburgh', 'Kansas', 'Missouri', 'Radford', 'Wichita State', 'Creighton', 'Coastal Caro.', 'Missouri State', 'Mich. St.', 'Illinois', 'Hawaii', 'LIU Brooklyn', 'Washington', 'Stanford', 'CSU Bakersfield', 'Colorado State', 'Michigan', 'Wisconsin', 'Marquette', 'Princeton', 'Iowa State', 'Utah', 'Cleveland State', 'High Point', 'Purdue', 'Oregon St.', 'NC State', 'Fairfield', 'Texas', 'Nebraska', 'Stony Brook', 'Florida State', 'Washington St.', 'Colorado', 'James Madison', 'Miami (Ohio)', 'Baylor', 'BYU', 'American', 'Kennesaw State', 'Oregon', 'Western Ky.', 'Notre Dame', 'East Tenn. St.', 'Kentucky', 'Minnesota', 'North Dakota', 'UNI', 'Louisville', 'San Diego', 'LSU', 'Central Ark.', 'USC', 'UCLA', 'Austin Peay', 'Denver', 'Cal Poly', 'Miami (Fla.)', 'Charleston', 'Alabama State', 'Florida']
+		
+		function printPicks(){
+			for(var i = 0; i<32; i+=2)
+				$('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (i/2+1)) + '</b></li>')
+			for(var i = 1; i<=32; i+=2)
+				$('ol').append('<li>'+ getQueryVariable('m' + i) + ' vs. ' + getQueryVariable('m' + (i+1)) + ': <b>' + getQueryVariable('m' + (32+(i/2+1))) + '</b></li>')
+			for(var i = 33; i<=48; i+=2)
+				$('ol').append('<li>'+ getQueryVariable('m' + i) + ' vs. ' + getQueryVariable('m' + (i+1)) + ': <b>' + getQueryVariable('m' + (48+((i-32)/2+1))) + '</b></li>')
+			for(var i = 49; i<=56; i+=2)
+				$('ol').append('<li>'+ getQueryVariable('m' + i) + ' vs. ' + getQueryVariable('m' + (i+1)) + ': <b>' + getQueryVariable('m' + (56+((i-49)/2+1))) + '</b></li>')
+			$('ol').append('<li>'+ getQueryVariable('m57') + ' vs. ' + getQueryVariable('m58') + ': <b>' + getQueryVariable('m61') + '</b></li>')
+			$('ol').append('<li>'+ getQueryVariable('m59') + ' vs. ' + getQueryVariable('m60') + ': <b>' + getQueryVariable('m62') + '</b></li>')
+			$('ol').append('<li>'+ getQueryVariable('m61') + ' vs. ' + getQueryVariable('m62') + ': <b>' + getQueryVariable('m63') + '</b></li>')
+		}
+		
+		$(function(){
+			$('#myname').append(getQueryVariable('name'))
+			printPicks()
+		})
+		
+		console.log(getQueryVariable('m1'));
+		</script>
+    </body>
+</html>
