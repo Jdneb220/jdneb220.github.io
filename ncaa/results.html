@@ -58,22 +58,23 @@
 		$(function(){
 			$('#myname').append(getQueryVariable('name'));
 			printPicks();
-			$.ajax({
-			  url: "https://api.rebrandly.com/v1/links",
-			  type: "post",
-			  data: JSON.stringify({
-					"destination" : window.location.href
-				  , "domain": { "fullName": "rebrand.ly" }
-			  }),
-			  headers: {
-				"Content-Type": "application/json",
-				"apikey": "ed72bb1cdc7346dcafb1645d7239e04c"
-			  },
-			  dataType: "json",
-			  success: function (link) {
-				$('#share').append("share your picks &rarr; <a href='https://"+link.shortUrl+"'>"+link.shortUrl+"</a>");
-			  }
-			});
+			if (getQueryVariable('shared') <> 1)
+				$.ajax({
+				  url: "https://api.rebrandly.com/v1/links",
+				  type: "post",
+				  data: JSON.stringify({
+						"destination" : window.location.href + '&shared=1'
+					  , "domain": { "fullName": "rebrand.ly" }
+				  }),
+				  headers: {
+					"Content-Type": "application/json",
+					"apikey": "ed72bb1cdc7346dcafb1645d7239e04c"
+				  },
+				  dataType: "json",
+				  success: function (link) {
+					$('#share').append("share your picks &rarr; <a href='https://"+link.shortUrl+"'>"+link.shortUrl+"</a>");
+				  }
+				});
 		})
 		
 		console.log(getQueryVariable('m1'));
