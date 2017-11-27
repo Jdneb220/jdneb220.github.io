@@ -58,7 +58,7 @@
 		$(function(){
 			$('#myname').append(getQueryVariable('name'));
 			printPicks();
-			if (getQueryVariable('shared') <> 1)
+			if (getQueryVariable('shared') != 1)
 				$.ajax({
 				  url: "https://api.rebrandly.com/v1/links",
 				  type: "post",
