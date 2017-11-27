@@ -76,13 +76,13 @@ $(function(){
 	//championship match 61
 	top = 467
 	left = 692
-	$("#nodes").append($("<input id='m61' name='m61' placeholder='m61' style='top:"+top+"px;left:"+left+"px;'></input>"))
+	$("#nodes").append($("<input id='m61' name='m61' placeholder='61' style='top:"+top+"px;left:"+left+"px;'></input>"))
 	
 	//championship match 62
 	top = 813
 	left = 1600-left-105+5;
-	$("#nodes").append($("<input id='m62' name='m62' placeholder='m62' style='top:"+top+"px;left:"+left+"px;'></input>"))
+	$("#nodes").append($("<input id='m62' name='m62' placeholder='62' style='top:"+top+"px;left:"+left+"px;'></input>"))
 	
 	//champion
-	$("#nodes").append($("<input id='m63' name='m63' placeholder='m63' style='top:628px;left:702px;font-size:24px; text-align:center; width:200px'></input>"))
+	$("#nodes").append($("<input id='m63' name='m63' placeholder='63' style='top:628px;left:702px;font-size:24px; text-align:center; width:200px'></input>"))
 });
