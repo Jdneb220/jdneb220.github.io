@@ -42,7 +42,7 @@
 		teams = ['Penn St.', 'Howard', 'VCU', 'Pittsburgh', 'Kansas', 'Missouri', 'Radford', 'Wichita State', 'Creighton', 'Coastal Caro.', 'Missouri State', 'Mich. St.', 'Illinois', 'Hawaii', 'LIU Brooklyn', 'Washington', 'Stanford', 'CSU Bakersfield', 'Colorado State', 'Michigan', 'Wisconsin', 'Marquette', 'Princeton', 'Iowa State', 'Utah', 'Cleveland State', 'High Point', 'Purdue', 'Oregon St.', 'NC State', 'Fairfield', 'Texas', 'Nebraska', 'Stony Brook', 'Florida State', 'Washington St.', 'Colorado', 'James Madison', 'Miami (Ohio)', 'Baylor', 'BYU', 'American', 'Kennesaw State', 'Oregon', 'Western Ky.', 'Notre Dame', 'East Tenn. St.', 'Kentucky', 'Minnesota', 'North Dakota', 'UNI', 'Louisville', 'San Diego', 'LSU', 'Central Ark.', 'USC', 'UCLA', 'Austin Peay', 'Denver', 'Cal Poly', 'Miami (Fla.)', 'Charleston', 'Alabama State', 'Florida']
 		
 		function printPicks(){
-			for(var i = 0; i<32; i+=2)
+			for(var i = 0; i<64; i+=2)
 				$('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (i/2+1)) + '</b></li>')
 			for(var i = 1; i<=32; i+=2)
 				$('ol').append('<li>'+ getQueryVariable('m' + i) + ' vs. ' + getQueryVariable('m' + (i+1)) + ': <b>' + getQueryVariable('m' + (32+(Math.floor(i/2)+1))) + '</b></li>')
