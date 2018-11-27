@@ -38,9 +38,13 @@
 			}
 			console.log('Query variable %s not found', variable);
 		}
-
-		teams = ['Penn St.', 'Howard', 'VCU', 'Pittsburgh', 'Kansas', 'Missouri', 'Radford', 'Wichita State', 'Creighton', 'Coastal Caro.', 'Missouri State', 'Mich. St.', 'Illinois', 'Hawaii', 'LIU Brooklyn', 'Washington', 'Nebraska', 'Stony Brook', 'Florida State', 'Washington St.', 'Colorado', 'James Madison', 'Miami (Ohio)', 'Baylor', 'BYU', 'American', 'Kennesaw State', 'Oregon', 'Western Ky.', 'Notre Dame', 'East Tenn. St.', 'Kentucky', 'Stanford', 'CSU Bakersfield', 'Colorado State', 'Michigan', 'Wisconsin', 'Marquette', 'Princeton', 'Iowa State', 'Utah', 'Cleveland State', 'High Point', 'Purdue', 'Oregon St.', 'NC State', 'Fairfield', 'Texas', 'Minnesota', 'North Dakota', 'UNI', 'Louisville', 'San Diego', 'LSU', 'Central Ark.', 'USC', 'UCLA', 'Austin Peay', 'Denver', 'Cal Poly', 'Miami (Fla.)', 'Charleston', 'Alabama State', 'Florida']
-		
+		//let y = jQuery('.name')
+		//let z = []
+		//y.each((a,b)=>{z.push(b.textContent)})
+		//Array.from(new Set(z))
+		//remove 16th element
+		teams = ["Stanford", "Alabama State", "Loyola Marym't", "Duke", "Tennessee", "Colorado State", "Northern Ariz.", "Washington St.", "Creighton", "South Dakota", "St. Mary's (Cal.)", "Washington", "Syracuse", "Yale", "Howard", "Penn St.", "Illinois", "Eastern Mich.", "Louisville", "Dayton", "Cincinnati", "Illinois State", "High Point", "Marquette", "USC", "Samford", "San Diego", "Cal Poly", "UNI", "Pepperdine", "Green Bay", "Wisconsin", "Texas", "SFA", "Rice", "Texas State", "Michigan", "Navy", "Iona", "Pittsburgh", "UCF", "FGCU", "Florida State", "Florida", "Utah", "Denver", "Stony Brook", "BYU", "Nebraska", "Hofstra", "Arizona", "Missouri", "Purdue", "East Tenn. St.", "Murray State", "Kentucky", "Oregon", "New Mexico St.", "Hawaii", "Baylor", "South Carolina", "Colorado", "Bryant", "Minnesota"]
+			
 		function printPicks(){
 			for(var i = 0; i<64; i+=2)
 				$('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (i/2+1)) + '</b></li>')
