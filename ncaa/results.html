@@ -44,16 +44,14 @@
 		//Array.from(new Set(z))
 		//remove 16th element
 		teams = ["Stanford", "Alabama State", "Loyola Marym't", "Duke", "Tennessee", "Colorado State", "Northern Ariz.", "Washington St.", "Creighton", "South Dakota", "St. Mary's (Cal.)", "Washington", "Syracuse", "Yale", "Howard", "Penn St.", "Illinois", "Eastern Mich.", "Louisville", "Dayton", "Cincinnati", "Illinois State", "High Point", "Marquette", "USC", "Samford", "San Diego", "Cal Poly", "UNI", "Pepperdine", "Green Bay", "Wisconsin", "Texas", "SFA", "Rice", "Texas State", "Michigan", "Navy", "Iona", "Pittsburgh", "UCF", "FGCU", "Florida State", "Florida", "Utah", "Denver", "Stony Brook", "BYU", "Nebraska", "Hofstra", "Arizona", "Missouri", "Purdue", "East Tenn. St.", "Murray State", "Kentucky", "Oregon", "New Mexico St.", "Hawaii", "Baylor", "South Carolina", "Colorado", "Bryant", "Minnesota"]
-			
+		let temp = [17, 18, 19, 20, 21, 22, 23 ,24, 9, 10, 11, 12, 13, 14, 15, 16]
+		
 		function printPicks(){
 			for(var i = 0; i<64; i+=2){
 				if (i >= 16 && i < 48)
-				{
-					let temp = [17, 18, 19, 20, 21, 22, 23 ,24, 9, 10, 11, 12, 13, 14, 15, 16]
-					$('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (temp[(i-16)/2])) + '</b></li>')
-				}
+				  $('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (temp[(i-16)/2])) + '</b></li>')
 				else
-				$('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (i/2+1)) + '</b></li>')
+				  $('ol').append('<li>'+ teams[i] + ' vs. ' + teams[i+1] + ': <b>' + getQueryVariable('m' + (i/2+1)) + '</b></li>')
 			}
 			for(var i = 1; i<=32; i+=2)
 				$('ol').append('<li>'+ getQueryVariable('m' + i) + ' vs. ' + getQueryVariable('m' + (i+1)) + ': <b>' + getQueryVariable('m' + (32+(Math.floor(i/2)+1))) + '</b></li>')
