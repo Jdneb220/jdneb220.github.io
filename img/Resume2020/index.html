@@ -1,0 +1,186 @@
+<html>
+<head>
+  <title>ben de jesus, web developer</title>
+
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      @media only screen and (max-width: 600px){
+        .card {
+          margin: 10% 20%;
+        }
+        .card .card-action {
+          flex-direction: column;
+        }
+      }
+      @media only screen and (min-width: 601px){
+        #nav {
+          height: 100%;
+          display: flex;
+        }
+      }
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 440px;
+      border: 0;
+      box-shadow: none;
+    }
+    .card .card-content {
+      padding: 10px;
+      font-size: 1.1em;
+    }
+    .card .card-action {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      margin:0;
+      padding:0 0 0 10px;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+      color: #039be5;
+      margin:0;
+      padding:0;
+    }
+
+    #flipboards{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 33% 34% 33%;
+    }
+
+      @media only screen and (max-width: 600px){
+        #flipboards {
+          grid-template-columns: 50% 50%;
+        }
+      }
+
+    .flipboard {
+      display: inline-block;
+      background: green;
+      box-shadow: 1px 1px 1px 1px #ccc;
+
+      margin: 5px;
+    }
+
+    .flipboard img {
+      height: 100%;
+      width: 100%;
+      -webkit-filter: grayscale(75%);
+    -moz-filter:    grayscale(75%);
+    -ms-filter:     grayscale(75%);
+    -o-filter:      grayscale(75%);
+    }
+    .flipboard img:hover {
+    -webkit-animation: saturate .4s forwards;
+    animation: saturate .4s forwards;
+    cursor: pointer;
+}
+    @-webkit-keyframes saturate {
+    100% { -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%); }
+}
+
+  @keyframes saturate {
+      100% { -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%); }
+  }
+
+    #modal1 {
+      width: 42%;
+      text-align: center;
+    }
+           @media only screen and (max-width: 600px){
+        #modal1 {
+          width: 80%;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="">
+      <div class="row">
+
+        <div id="nav" class="col s12 m4 l3">
+          <div class="card">
+            <div class="card-main">
+            <div class="card-image">
+              <img src="ben.jpg" style="border-radius: 50%">
+            </div>
+            <div class="card-content">
+              <p><span style="font-size:1.3em">benjamin de jesus</span><br>
+                (724) 581-1581<br>
+                Cincinnati, OH 45202<br>
+                <a href="mailto:bdejesus@stanfordalumni.org">bdejesus@stanfordalumni.org</a></p>
+            </div>
+            </div>
+            <div class="card-action">
+              <a target=_blank href="https://jdneb220.github.io/BDJResume.pdf">Resume</a><br>
+              <a target=_blank href="https://www.linked.in/in/benjamincdejesus">LinkedIn</a><br>
+              <a target=_blank href="https://jdneb220.github.io/">GitHub</a><br>
+            </div>
+          </div>
+
+
+                <a target="_blank" href="https://www.linkedin.com/in/benjamincdejesus/">
+                <icon class="entypo-linkedin"></icon>
+                </a>
+
+                <a target="_blank" href="https://github.com/Jdneb220/">
+                <icon class="entypo-github"></icon>
+                </a>
+        </div>
+
+        <div class="col s12 m8 l9">
+          <div id="flipboards">
+            <div class="flipboard s6 m6 l4"><a href="https://pantene.com" target=_blank><img src="1.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://haircode.com" target=_blank><img src="2.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://latam.haircode.com" target=_blank><img src="3.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://usdf.org" target=_blank><img src="4.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://jdneb220.github.io/BDJResume.pdf" target=_blank><img src="r.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://pioneervb.com/" target=_blank><img src="6.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://jdneb220.github.io/bsb.html" target=_blank><img src="7.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="http://202020.benjamindejes.us/" target=_blank><img src="8.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="http://myjournal.benjamindejes.us/" target=_blank><img src="9.png"/></a></div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+<!-- Modal Trigger -->
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="padding-bottom:0">
+      <h4 style="margin:0;font-size:3rem;margin-bottom:10px">hello, i'm ben.</h4>
+      <h5 style="margin:0;">nice to meet you!</h5>
+      <p>i like to build fun websites for everybody to use.<br>
+        i'd love to share my talent with your team.<br>
+        wanna see my portfolio?</p>
+    </div>
+    <div class="modal-footer" style="text-align:center">
+      <a href="#!" class="modal-close waves-effect waves-green btn">Ok</a>
+    </div>
+  </div>
+
+  <script>
+    M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+    instances[0].open();
+  });
+  </script>
+</body>
+</html>
+
