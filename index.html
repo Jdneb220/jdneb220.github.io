@@ -1,230 +1,188 @@
-
-<!doctype html>
 <html>
-  <head>
-
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>ben de jesus, web developer</title>
 
-  <title>Benjamin de Jesus</title>
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <link rel="stylesheet" href="/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>
-  <link href='resumeStyle.css' rel='stylesheet' type='text/css'>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#006785">
-  <meta name="theme-color" content="#ffffff">
-    
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-  <style>
-    .spice {
-      display: inline-block;
-      transform: rotate(-20deg);
-      position: relative;
-      top: 1px;
-      left: -.5px;
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+      @media only screen and (max-width: 600px){
+        .card {
+          margin: 10% 20%;
+        }
+        .card .card-action {
+          flex-direction: column;
+        }
+      }
+      @media only screen and (min-width: 601px){
+        #nav {
+          height: 100%;
+          display: flex;
+        }
+      }
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 440px;
+      border: 0;
+      box-shadow: none;
     }
-  </style>
-  </head>
-  <body>
+    .card .card-content {
+      padding: 10px;
+      font-size: 1.1em;
+    }
+    .card .card-action {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      margin:0;
+      padding:0 0 0 10px;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+      color: #039be5;
+      margin:0;
+      padding:0;
+    }
 
-  <div class="container" id="resume">
-      <div id="card" class="row" style="">
-        <div class="col-xs-12 col-sm-12">
-          <h1>Benjamin <span>de Jesus</span></h1>
-          <h2>Fullst<span class='spice'>4</span>ck Developer</h2>
-          <section id="basics">
-            <div class="contact">
-              <div class="website">
-                <icon class="entypo-compass"></icon>
-                <a href="http://www.benjamindejes.us">http://www.benjamindejes.us</a>
-              </div>
-              <div class="email">
-                <icon class="entypo-mail"></icon>
-                <a href="mailto:bdejesus@stanfordalumni.org">bdejesus@stanfordalumni.org</a>
-              </div>
-              <div class="phone">
-                <icon class="entypo-phone"></icon>
-                (724) 581-1581
-              </div>
+    #flipboards{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 33% 34% 33%;
+    }
+
+      @media only screen and (max-width: 600px){
+        #flipboards {
+          grid-template-columns: 50% 50%;
+        }
+      }
+
+    .flipboard {
+      display: inline-block;
+      background: green;
+      box-shadow: 1px 1px 1px 1px #ccc;
+
+      margin: 5px;
+    }
+
+    .flipboard img {
+      height: 100%;
+      width: 100%;
+      -webkit-filter: grayscale(75%);
+    -moz-filter:    grayscale(75%);
+    -ms-filter:     grayscale(75%);
+    -o-filter:      grayscale(75%);
+    }
+    .flipboard img:hover {
+    -webkit-animation: saturate .4s forwards;
+    animation: saturate .4s forwards;
+    cursor: pointer;
+}
+    @-webkit-keyframes saturate {
+    100% { -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%); }
+}
+
+  @keyframes saturate {
+      100% { -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%); }
+  }
+
+    #modal1 {
+      width: 42%;
+      text-align: center;
+    }
+           @media only screen and (max-width: 600px){
+        #modal1 {
+          width: 80%;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="">
+      <div class="row">
+
+        <div id="nav" class="col s12 m4 l3">
+          <div class="card">
+            <div class="card-main">
+            <div class="card-image">
+              <img src="Resume2020/ben.jpg" style="border-radius: 50%">
             </div>
-            <section id="location">
-              <icon class="entypo-home"></icon>
-              <span class="address">
+            <div class="card-content">
+              <p><span style="font-size:1.3em">benjamin de jesus</span><br>
+                (724) 581-1581<br>
+                Cincinnati, OH 45202<br>
+                <a href="mailto:bdejesus@stanfordalumni.org">bdejesus@stanfordalumni.org</a></p>
+            </div>
+            </div>
+            <div class="card-action">
+              <a target=_blank href="https://jdneb220.github.io/BDJResume.pdf">Resume</a><br>
+              <a target=_blank href="https://www.linked.in/in/benjamincdejesus">LinkedIn</a><br>
+              <a target=_blank href="https://jdneb220.github.io/">GitHub</a><br>
+            </div>
+          </div>
 
-                <span class="postalCode">OH 45202</span>
-                <span class="city">Cincinnati</span>
-                <span class="region">Ohio</span>
-                <span class="countryCode">US</span>
-              </span>
-            </section>
-            <section id="profiles">
-              <div class="item">
-                <a target=_blank href="https://www.linkedin.com/in/benjamincdejesus/">
+
+                <a target="_blank" href="https://www.linkedin.com/in/benjamincdejesus/">
                 <icon class="entypo-linkedin"></icon>
                 </a>
-              </div>
-              <div class="item">
-                <a target=_blank href="https://github.com/Jdneb220/">
+
+                <a target="_blank" href="https://github.com/Jdneb220/">
                 <icon class="entypo-github"></icon>
                 </a>
-              </div>
-            </section>
-          </section>
         </div>
-      </div>
-  <section id="work" class="row" style="">
-    <div class="col-sm-4">
-      <div class="row">
-        <div class="col-xs-2">
-          <icon class="large entypo-briefcase"></icon>
-        </div>
-        <div class="col-xs-10">
-          <h2 class="section-title">Cool Projects</h2>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-sm-8">
+        <div class="col s12 m8 l9">
+          <div id="flipboards">
+            <div class="flipboard s6 m6 l4"><a href="https://pantene.com" target=_blank><img src="Resume2020/1.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://haircode.com" target=_blank><img src="Resume2020/2.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://latam.haircode.com" target=_blank><img src="Resume2020/3.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://usdf.org" target=_blank><img src="Resume2020/4.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://jdneb220.github.io/BDJResume.pdf" target=_blank><img src="Resume2020/r.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://pioneervb.com/" target=_blank><img src="Resume2020/6.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="https://jdneb220.github.io/bsb.html" target=_blank><img src="Resume2020/7.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="http://202020.benjamindejes.us/" target=_blank><img src="Resume2020/8.png"/></a></div>
+            <div class="flipboard s6 m6 l4"><a href="http://myjournal.benjamindejes.us/" target=_blank><img src="Resume2020/9.png"/></a></div>
+          </div>
 
-      <div class="item">
-        <h3 class="name">
-          Sogeti, USA
-        </h3>
- 
-        <div class="website">
-          <a href="https://www.sogeti.com/" target=_blank>https://www.sogeti.com/</a>
         </div>
-        <div class="summary">
-          <p>Global brand marketing and digital transformation projects<br>
-            Technologies: React, Azure DevOps, Contentful, GatsbyJS, Python, Angular, SharePoint, ServiceNow
-          </p>
-        </div>
-      </div>
-      
-      <div class="item">
-        <h3 class="name">
-          US Dressage Federation
-        </h3>
- 
-        <div class="website">
-          <a href="https://www.usdf.org" target=_blank>https://www.usdf.org</a>
-        </div>
-        <div class="summary">
-          <p>ASP website in Bootstrap framework<br>
-            Podcast interview with <a href="https://responsivewebdesign.com/podcast/usdf/" target=_blank>Responsive Web Design Podcast</a></p>
-        </div>
-      </div>
-      
-      <div class="item">
-        <h3 class="name">
-          USA Volleyball Pioneer Region
-        </h3>
-        
-        <div class="website">
-          <a href="http://pioneervb.com/" target=_blank>http://pioneervb.com/</a>
-        </div>
-        <div class="summary">
-          <p>Responsive redesign freelance consultation</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <h3 class="name">
-          NCAA Volleyball Bracket
-        </h3>
-        <div class="website">
-          <a href="https://jdneb220.github.io/ncaa/" target=_blank>Project</a>
-        </div>
-        <div class="summary">
-          <p>Interactive tournament grid.  Uses JavaScript, rebrand.ly API, and jQuery</p>
-        </div>
-      </div>
-      
-      <div class="item">
-        <h3 class="name">
-          tttwenty
-        </h3> 
-        <div class="website">
-          <a href="http://202020.benjamindejes.us" target=_blank>Live version on Heroku</a>
-        </div>
-        <div class="summary">
-          <p>Final Project from General Assembly Web Design Immersive.  React + Flexbox + Bootstrap.
-        </div>
-      </div>
-      
-      <div class="item">
-        <h3 class="name">
-          MyJournal
-        </h3> 
-        <div class="website">
-          <a href="http://myjournal.benjamindejes.us" target=_blank>Live version on Heroku</a>
-        </div>
-        <div class="summary">
-          <p>Project #2 in General Assembly Web Design Immersive.  Node + Express + Materialize.
-        </div>
-      </div>
-
-      <div class="item">
-        <h3 class="name">
-          Bump, Set, Bash!
-        </h3> 
-        <div class="website">
-          <a href="bsb.html" target=_blank>Project</a>
-        </div>
-        <div class="summary">
-          <p>First project in General Assembly Web Design Immersive.  Uses JavaScript, CSS Keyframe Animations, Spritesheets, and jQuery</p>
-        </div>
-      </div>
 
     </div>
-  </section>
-
-
-
-
-
-
-  <section id="interests" class="row" style="">
-    <div class="col-sm-4">
-      <div class="row">
-        <div class="col-xs-2">
-          <icon class="large entypo-heart"></icon>
-        </div>
-        <div class="col-xs-10">
-          <h2 class="section-title"><span class='spice'>4</span>lso</h2>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-8">
-      <div class="item">
-        <h3><a target=_blank href="https://www.youtube.com/channel/UCjEPGNRROHmkxLtGQCX_auw"><span class="label label-default label-lg">Food</span></a></h3>
-      </div>
-      <div class="item">
-        <h3><a href="http://roblafratta.com/mariowario?mc_cid=7a9ac9b5ca&mc_eid=98dbc693dd" target=_blank><span class="label label-default label-lg">Super Mario</span></a></h3>
-      </div>
-      <div class="item">
-        <h3><a href="https://we-bare-bear.tumblr.com/post/150164291784" target=_blank><span class="label label-default label-lg">We Bare Bears</span></a></h3>
-      </div>
-      <div class="item">
-        <h3><a href="http://trailers.apple.com/" target=_blank><span class="label label-default label-lg">Movies</span></a></h3>
-      </div>
-      <div class="item">
-        <h3><a href="BDJResume.pdf" target=_blank><span class="label label-default label-lg">My Resume</span></a></h3>
-      </div>
-    </div>
-  </section>
-
-
   </div>
 
-  </body>
+<!-- Modal Trigger -->
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="padding-bottom:0">
+      <h4 style="margin:0;font-size:3rem;margin-bottom:10px">hello, i'm ben.</h4>
+      <h5 style="margin:0;">nice to meet you!</h5>
+      <p>i like to build fun websites for everybody to use.<br>
+        i'd love to share my talent with your team.<br>
+        wanna see my portfolio?</p>
+    </div>
+    <div class="modal-footer" style="text-align:center">
+      <a href="#!" class="modal-close waves-effect waves-green btn">Ok</a>
+    </div>
+  </div>
+
+  <script>
+    M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+    instances[0].open();
+  });
+  </script>
+</body>
 </html>
+
