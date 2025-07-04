@@ -421,6 +421,7 @@
 
   //gameStates are: ready, serve, bump, set, attack
   $(document).keydown(function(e){
+    $('#console').append(' tap ', e.which);
     console.log(e.which)
     if (keyIsDown || !mouseIsUp) return false;
     else {
@@ -437,6 +438,7 @@
   })
 
   $(document).mousedown(function(e){
+    $('#console').append(' click ', e.which);
     mouseIsDown = true
     if (keyIsDown) return false;
     gameLogic()
