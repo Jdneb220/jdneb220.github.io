@@ -447,6 +447,8 @@
     if (!keyIsDown)
       setTimeout(bumpStop(), 200)
   })
+/*
+7/4/25 remove touchstart and touchend event listeners.  mousedown should already trigger event on mobile.
 
   document.addEventListener('touchstart', function(){
       mouseIsDown = true
@@ -458,5 +460,5 @@ document.addEventListener('touchend', function(){
     if (!keyIsDown)
       setTimeout(bumpStop(), 200)
   }, false);
-
+*/
 
